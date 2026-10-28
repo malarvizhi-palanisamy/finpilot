@@ -34,7 +34,7 @@ jobs:
         run: python -m pytest -v
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/${{ github.repository }}:latest .
+        run: docker build -t ghcr.io/${{ github.repository }}:${{ github.sha }} .
 
       - name: Log in to GitHub Container Registry
         if: github.event_name == 'push'
@@ -42,7 +42,7 @@ jobs:
 
       - name: Push Docker image
         if: github.event_name == 'push'
-        run: docker push ghcr.io/${{ github.repository }}:latest
+        run: docker push ghcr.io/${{ github.repository }}:${{ github.sha }}
 
       - name: Authenticate to Google Cloud
         if: github.event_name == 'push'
@@ -57,4 +57,4 @@ jobs:
         with:
           service: finpilot
           region: europe-west1
-          image: ghcr.io/${{ github.repository }}:latest
+          image: ghcr.io/${{ github.repository }}:${{ github.sha }}
