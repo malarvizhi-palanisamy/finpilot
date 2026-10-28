@@ -48,7 +48,7 @@ jobs:
         if: github.event_name == 'push'
         uses: google-github-actions/auth@v3
         with:
-          workload_identity_provider: projects/625484093154/locations/global/workloadIdentityPools/github-actions-pool/providers/github
+          workload_identity_provider: projects/625484093154/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions
           service_account: github-actions-deployer@devops-project1-512907.iam.gserviceaccount.com
 
       - name: Deploy to Cloud Run
