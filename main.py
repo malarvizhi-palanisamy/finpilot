@@ -17,7 +17,7 @@ expenses = [
 
 @app.get("/")
 def home():
-    return {"message": "Welcome to FinPilot AI!"}
+    return {"message": "FinPilot AI - Automatic deployment successful!"}
 
 
 @app.get("/health")
