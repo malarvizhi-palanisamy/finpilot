@@ -1,4 +1,4 @@
-
+import os
 from fastapi import FastAPI
 
 app = FastAPI(
@@ -17,7 +17,8 @@ expenses = [
 
 @app.get("/")
 def home():
-    return {"message": "FinPilot AI - Automatic deployment successfully!"}
+    message = os.getenv("APP_MESSAGE", "Welcome to FinPilot AI!")
+    return {"message": message}
 
 
 @app.get("/health")
