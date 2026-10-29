@@ -17,7 +17,7 @@ expenses = [
 
 @app.get("/")
 def home():
-    message = os.getenv("APP_MESSAGE", "Welcome to FinPilot AI!")
+    message = os.getenv("APP_MESSAGE", "Welcome to FinPilot Ai!")
     return {"message": message}
 
 
