@@ -58,3 +58,11 @@ jobs:
           service: finpilot
           region: europe-west1
           image: ghcr.io/${{ github.repository }}:${{ github.sha }}
+                - name: Deploy to Cloud Run
+        if: github.event_name == 'push'
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: finpilot
+          region: europe-west1
+          image: ghcr.io/${{ github.repository }}:${{ github.sha }}
+          no_traffic: true
