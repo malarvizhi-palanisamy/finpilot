@@ -3,7 +3,7 @@ from fastapi import FastAPI
 
 app = FastAPI(
     title="FinPilot AI",
-    description="A personal finance assistant API",
+    description="A personal finance assistant API - test for secrets ",
     version="0.1.0",
 )
 
