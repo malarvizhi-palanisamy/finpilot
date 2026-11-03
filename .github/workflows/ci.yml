@@ -1,11 +1,13 @@
-```yaml
+
 name: FinPilot CI and CD
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -59,4 +61,3 @@ jobs:
           region: europe-west1
           image: ghcr.io/${{ github.repository }}:${{ github.sha }}
           no_traffic: true
-```
