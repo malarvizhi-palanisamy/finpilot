@@ -9,6 +9,7 @@ app = FastAPI(
     version="0.1.0",
 )
 
+
 expenses = [
     {"category": "Groceries", "amount": 450},
     {"category": "Transport", "amount": 200},
