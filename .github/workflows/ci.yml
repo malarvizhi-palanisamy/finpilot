@@ -60,4 +60,4 @@ jobs:
           service: finpilot
           region: europe-west1
           image: ghcr.io/${{ github.repository }}:${{ github.sha }}
-          no_traffic: true
+      
